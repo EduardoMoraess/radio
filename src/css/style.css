@@ -173,6 +173,11 @@ nav {
     .menu-toggle {
         display: block;
         z-index: 200;
+        background-color: rgb(255, 166, 0);
+        border-radius: 20px;
+        font-size: 1rem;
+        padding: 10px 20px;
+        font-weight: bold;
     }
 
     .nav-links {
