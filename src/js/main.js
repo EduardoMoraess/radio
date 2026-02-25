@@ -79,6 +79,23 @@ if (searchInput) {
         renderSongs('all-songs-grid', filtered);
     });
 }
-
 window.playVideo = playVideo;
 window.showPage = showPage;
+
+
+// MENU MOBILE
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
+
+// Fecha menu ao clicar em um link
+document.querySelectorAll('#nav-links li').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});

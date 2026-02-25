@@ -172,3 +172,64 @@ nav {
         display: none;
     }
 }
+
+
+/* ============================= */
+/* MENU MOBILE CORRIGIDO */
+/* ============================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    nav {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 200;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        background: linear-gradient(135deg, var(--blue-dark), var(--blue-medium));
+        width: 220px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+        transform: translateX(120%);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: var(--transition);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    .search-box {
+        display: none;
+    }
+}

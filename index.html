@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LouvorPlay - Música Gospel</title>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
         rel="stylesheet"
@@ -19,11 +20,18 @@
         <div class="container">
             <nav>
                 <h2 style="font-family: 'Playfair Display';">LouvorPlay</h2>
-                <ul class="nav-links">
+
+                <!-- BOTÃO MOBILE -->
+                <div class="menu-toggle" id="menu-toggle">
+                    ☰
+                </div>
+
+                <ul class="nav-links" id="nav-links">
                     <li onclick="showPage('home')">Início</li>
                     <li onclick="showPage('musicas')">Músicas</li>
                     <li onclick="showPage('favoritos')">Favoritos</li>
                 </ul>
+
                 <div class="search-box">
                     <input 
                         type="text" id="search" placeholder="Buscar..."
@@ -43,8 +51,7 @@
         </section>
 
         <div class="container">
-            <div id="video-player-container">
-            </div>
+            <div id="video-player-container"></div>
 
             <section id="page-home">
                 <h2 class="section-title">Lançamentos</h2>
@@ -62,7 +69,7 @@
         <p>© 2026 LouvorPlay - Música que Transforma</p>
     </footer>
 
-   <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
 
 </body>
 
