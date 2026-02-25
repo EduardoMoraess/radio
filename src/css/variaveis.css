@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --blue-dark: #1E3A8A;
+    --blue-medium: #3B82F6;
+    --blue-light: #60A5FA;
+    --white: #FFFFFF;
+    --gray-light: #F3F4F6;
+    --gray-medium: #E5E7EB;
+    --text-dark: #1F2937;
+    --transition: all 0.3s ease;
+}
+
+
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: var(--gray-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
