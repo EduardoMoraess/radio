@@ -1,7 +1,7 @@
 export const songs = [
     {
-        id: '1', title: 'Eu so de Jesus', artist: 'Irmão Lazaro',
-        youtubeId: 'https://youtu.be/_kxqoo6QInM?si=aZIR7BpMDG-AR6wB', cover: '🎵'
+        id: '1', title: 'Santo Pra Sempre', artist: 'Fernandinho',
+        youtubeId: 'https://youtu.be/u2FOGNSJfX8?si=H3OGE2_S6EGGK3bq', cover: '🎵'
     },
     {
         id: '2', title: 'Efesio 6', artist: 'Anderson Freire',
@@ -12,12 +12,12 @@ export const songs = [
         youtubeId: 'https://youtu.be/B_m5vhUjPVA?si=ZaCb-wQngOiBzNmo', cover: '🎵'
     },
     {
-        id: '4', title: 'Todavia Me Alegrarei', artist: 'Leandro Borges',
-        youtubeId: '6C0fndA7fV0', cover: '🎵'
+        id: '4', title: 'Raridade (CD COMPLETO)', artist: 'Anderson Freire ',
+        youtubeId: 'https://youtu.be/TWTKNF8FYyY?si=1R4pvPnR4VhFSWu3', cover: '🎵'
     },
     {
-        id: '5', title: 'Bondade de Deus', artist: 'Isaias Saad',
-        youtubeId: '6mO4o6_S9u8', cover: '🎵'
+        id: '5', title: 'Passando pela Prova', artist: 'Irmão Lazaro',
+        youtubeId: 'https://youtu.be/aW5a2oewZpI?si=b9qpbG2F1tf7XKsu', cover: '🎵'
     },
     {
         id: '6', title: 'Raridade', artist: 'Anderson Freire',

@@ -79,9 +79,6 @@ if (searchInput) {
         renderSongs('all-songs-grid', filtered);
     });
 }
-window.playVideo = playVideo;
-window.showPage = showPage;
-
 
 // MENU MOBILE
 const menuToggle = document.getElementById('menu-toggle');
@@ -99,3 +96,6 @@ document.querySelectorAll('#nav-links li').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+
+window.playVideo = playVideo;
+window.showPage = showPage;
