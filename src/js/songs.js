@@ -20,23 +20,23 @@ export const songs = [
         youtubeId: 'https://youtu.be/aW5a2oewZpI?si=b9qpbG2F1tf7XKsu', cover: '🎵'
     },
     {
-        id: '6', title: 'Raridade', artist: 'Anderson Freire',
+        id: '6', title: 'Ousado amor de Deus (Heavy Metal)', artist: 'Gospel Remasters',
+        youtubeId: 'https://youtu.be/8Sb-BOzQNRQ?si=ErzGGBl6Zz6WxTTL', cover: '🎵'
+    },
+    {
+        id: '7', title: 'Sem Musica', artist: 'artista desconhecido',
         youtubeId: 'm4I9m_9X0vM', cover: '🎵'
     },
     {
-        id: '7', title: 'Raridade', artist: 'Anderson Freire',
+        id: '8', title: 'Sem Musica', artist: 'artista desconhecido',
         youtubeId: 'm4I9m_9X0vM', cover: '🎵'
     },
     {
-        id: '8', title: 'Raridade', artist: 'Anderson Freire',
+        id: '9', title: 'Sem Musica', artist: 'artista desconhecido',
         youtubeId: 'm4I9m_9X0vM', cover: '🎵'
     },
     {
-        id: '9', title: 'Raridade', artist: 'Anderson Freire',
-        youtubeId: 'm4I9m_9X0vM', cover: '🎵'
-    },
-    {
-        id: '10', title: 'Raridade', artist: 'Anderson Freire',
+        id: '10', title: 'Sem Musica', artist: 'artista desconhecido',
         youtubeId: 'm4I9m_9X0vM', cover: '🎵'
     },
 ];
