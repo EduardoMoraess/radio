@@ -99,3 +99,25 @@ document.querySelectorAll('#nav-links li').forEach(link => {
 
 window.playVideo = playVideo;
 window.showPage = showPage;
+
+//Modal de Add music
+function modalMusic(){
+    const addMusic = document.getElementById('addMusic');
+    const modal = document.querySelector('dialog');
+    const music = document.getElementById('music');
+
+    addMusic.onclick = function(){
+        modal.showModal()
+    }
+
+    music.addEventListener('click', ()=>{
+        const numero = '5587981443129'//numero wpp
+        const mensagem = 'Olá!, Gostaria de adicionar uma musica ao site'
+
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+        window.open(url, "_blank")
+        modal.close();
+    })
+}
+modalMusic();
