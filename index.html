@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LouvorPlay - Música Gospel</title>
 
-    <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2020/09/25/02/56/music-5600363_640.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2020/09/25/02/56/music-5600363_640.png"
+        type="image/x-icon">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
@@ -35,10 +35,8 @@
                 </ul>
 
                 <div class="search-box">
-                    <input 
-                        type="text" id="search" placeholder="Buscar..."
-                        style="padding: 5px 10px; border-radius: 15px; border: none;"
-                    >
+                    <input type="text" id="search" placeholder="Buscar..."
+                        style="padding: 5px 10px; border-radius: 15px; border: none;">
                 </div>
             </nav>
         </div>
@@ -67,21 +65,35 @@
         </div>
     </main>
 
+
+
     <footer style="background: #222; color: white; text-align: center; padding: 40px 0; margin-top: 50px;">
         <p>© 2026 LouvorPlay - Música que Transforma</p>
 
-        <button id="addMusic" class="btn-add">Adicionar musica</button>
+        <button id="btn-abrir-sugestao" class="btn-novo-envio">
+            <span>➕</span> Sugerir Música
+        </button>
 
-        <dialog class="dialog">
-            <span class="info">Deseja Adicionar uma musica?</span>
-            <p class="paraf">
-                Se sim, clique no botão abaixo
-            </p>
-            <button id="music">Adicionar musica</button>
+        <dialog id="modal-sugestao" class="modal-estilizado">
+            <div class="modal-body">
+                <h3>Sugerir Música</h3>
+                <input type="text" id="input-titulo" placeholder="Título da música">
+                <input type="text" id="input-artista" placeholder="Nome do Artista">
+                <input type="text" id="input-url" placeholder="Link do YouTube">
+
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <button id="btn-cancelar-sugestao"
+                        style="background: #ccc; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Cancelar</button>
+                    <button id="btn-enviar-sugestao"
+                        style="background: #25d366; color: rgb(0, 0, 0); border: none; padding: 10px; border-radius: 5px; cursor: pointer; flex: 1;">Enviar
+                        WhatsApp</button>
+                </div>
+            </div>
         </dialog>
     </footer>
 
     <script type="module" src="./src/js/main.js"></script>
+    <script src="src/js/modalMusic.js"></script>
 
 </body>
 

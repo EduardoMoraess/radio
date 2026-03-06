@@ -101,23 +101,54 @@ window.playVideo = playVideo;
 window.showPage = showPage;
 
 //Modal de Add music
-function modalMusic(){
-    const addMusic = document.getElementById('addMusic');
-    const modal = document.querySelector('dialog');
-    const music = document.getElementById('music');
+// --- LÓGICA DO MODAL DE SUGESTÃO ---
+function initModal() {
+    const modal = document.getElementById('modal-sugestao');
+    const btnAbrir = document.getElementById('btn-abrir-sugestao');
+    const btnCancelar = document.getElementById('btn-cancelar-sugestao');
+    const btnEnviar = document.getElementById('btn-enviar-sugestao');
 
-    addMusic.onclick = function(){
-        modal.showModal()
+    if (!btnAbrir || !modal) {
+        console.error("Elementos do modal não encontrados!");
+        return;
     }
 
-    music.addEventListener('click', ()=>{
-        const numero = '5587981443129'//numero wpp
-        const mensagem = 'Olá!, Gostaria de adicionar uma musica ao site'
+    // Abre o modal
+    btnAbrir.onclick = () => {
+        modal.showModal();
+    };
 
-        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-        window.open(url, "_blank")
+    // Fecha o modal
+    btnCancelar.onclick = () => {
         modal.close();
-    })
+    };
+
+    // Fecha ao clicar fora
+    modal.onclick = (e) => {
+        if (e.target === modal) modal.close();
+    };
+
+    // Envio para WhatsApp
+    btnEnviar.onclick = () => {
+        const titulo = document.getElementById('input-titulo').value;
+        const artista = document.getElementById('input-artista').value;
+        const url = document.getElementById('input-url').value;
+
+        if (!titulo || !artista || !url) {
+            alert("Por favor, preencha todos os campos!");
+            return;
+        }
+
+        const numero = "5587981443129";
+        const msg = `*Sugestão LouvorPlay*%0A🎵 Música: ${titulo}%0A👤 Artista: ${artista}%0A🔗 Link: ${url}`;
+
+        window.open(`https://wa.me/${numero}?text=${msg}`, "_blank");
+        modal.close();
+    };
 }
-modalMusic();
+
+// Chame a função quando o documento carregar
+document.addEventListener('DOMContentLoaded', () => {
+    // ... suas funções de renderizar músicas ...
+    initModal();
+});
