@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>LouvorPlay - Música Gospel</title>
 
-    <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2020/09/25/02/56/music-5600363_640.png"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2020/09/25/02/56/music-5600363_640.png">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/src/css/style.css">
 </head>
@@ -20,12 +18,13 @@
 
     <header>
         <div class="container">
-            <nav>
-                <h2 style="font-family: Roboto, sans-serif;">LouvorPlay</h2>
 
-                <!-- BOTÃO MOBILE -->
+            <nav>
+
+                <h2 class="logo">LouvorPlay</h2>
+
                 <div class="menu-toggle" id="menu-toggle">
-                    Menu
+                    ☰
                 </div>
 
                 <ul class="nav-links" id="nav-links">
@@ -35,14 +34,15 @@
                 </ul>
 
                 <div class="search-box">
-                    <input type="text" id="search" placeholder="Buscar..."
-                        style="padding: 5px 10px; border-radius: 15px; border: none;">
+                    <input type="text" id="search" placeholder="Buscar música...">
                 </div>
+
             </nav>
         </div>
     </header>
 
     <main>
+
         <section class="hero" id="hero-section">
             <div class="container">
                 <h1 id="daily-verse">"O Senhor é o meu pastor, nada me faltará"</h1>
@@ -51,6 +51,7 @@
         </section>
 
         <div class="container">
+
             <div id="video-player-container"></div>
 
             <section id="page-home">
@@ -62,34 +63,50 @@
                 <h2 class="section-title">Todas as Músicas</h2>
                 <div id="all-songs-grid" class="grid"></div>
             </section>
+
         </div>
+
     </main>
 
 
+    <footer>
 
-    <footer style="background: #222; color: white; text-align: center; padding: 40px 0; margin-top: 50px;">
         <p>© 2026 LouvorPlay - Música que Transforma</p>
 
         <button id="btn-abrir-sugestao" class="btn-novo-envio">
-            <span>➕</span> Sugerir Música
+            <span>+</span> Sugerir Música
         </button>
 
         <dialog id="modal-sugestao" class="modal-estilizado">
-            <div class="modal-body">
-                <h3>Sugerir Música</h3>
-                <input type="text" id="input-titulo" placeholder="Título da música">
-                <input type="text" id="input-artista" placeholder="Nome do Artista">
-                <input type="text" id="input-url" placeholder="Link do YouTube">
 
-                <div style="display: flex; gap: 10px; margin-top: 15px;">
-                    <button id="btn-cancelar-sugestao"
-                        style="background: #ccc; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Cancelar</button>
-                    <button id="btn-enviar-sugestao"
-                        style="background: #25d366; color: rgb(0, 0, 0); border: none; padding: 10px; border-radius: 5px; cursor: pointer; flex: 1;">Enviar
-                        WhatsApp</button>
+            <div class="modal-body">
+
+                <h3>Sugerir Música</h3>
+
+                <input 
+                    type="text" 
+                    id="input-titulo" 
+                    placeholder="Título da música" required
+                >
+                <input 
+                    type="text" 
+                    id="input-artista" 
+                    placeholder="Nome do Artista" required
+                >
+                <input 
+                    type="text" id="input-url" 
+                    placeholder="Link do YouTube" required
+                >
+
+                <div class="modal-actions">
+                    <button id="btn-cancelar-sugestao">Cancelar</button>
+                    <button id="btn-enviar-sugestao">Enviar WhatsApp</button>
                 </div>
+
             </div>
+
         </dialog>
+
     </footer>
 
     <script type="module" src="./src/js/main.js"></script>
